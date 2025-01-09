@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Exploring the Future of Computing: Evaluating and Enhancing Reconfigurable Architectures for HPC, AI, and Edge Computing - Jekyll Advance</title>
+
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/arch_reconf/"/>
+
+  <meta property="og:title" content="Exploring the Future of Computing: Evaluating and Enhancing Reconfigurable Architectures for HPC, AI, and Edge Computing"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+</div>
+
+
+
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/fellows.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Fellows</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/early_career.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Early Career</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
+    
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
+          </div>
+          <div class="post-title">
+            <h1>Exploring the Future of Computing: Evaluating and Enhancing Reconfigurable Architectures for HPC, AI, and Edge Computing</h1>
+          </div>
+          
+
+          
+
+          <ul class="event-meta mb-2">
+              
+              
+              
+              <li><b>Head</b></li>
+              
+              
+              <li>Yoshii Kazutomo ()</li>
+              
+              
+              <li><b>Members</b></li>
+              
+              
+              
+              <li>
+                  Sano Kentaro ()
+              </li>
+              
+              
+              
+              <li>
+                  Ueno Tomohiro ()
+              </li>
+              
+              
+              
+              <li>
+                  Adhi Boma (R-CCS)
+              </li>
+              
+              
+              
+              <li>
+                  Alvarez Carlos ()
+              </li>
+              
+              
+              
+              <li>
+                  Jimenez-Gonzalez Daniel (BSC)
+              </li>
+              
+              
+              
+              <li>
+                  Martorell Xavier ()
+              </li>
+              
+              
+              
+              <li>
+                  Miguel de Haro Juan ()
+              </li>
+              
+              
+              
+              <li>
+                  Cappello Franck ()
+              </li>
+              
+              
+              
+              <li>
+                  Applencourt Thomas (ANL)
+              </li>
+              
+              
+              
+              
+              
+              
+          </ul>
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>The end of transistor scaling encourages us to challenge innovative architectural approaches for the future of computing. Reconfigurable architectures, such as field-programmable gate arrays (FPGA) and coarse-grained reconfigurable architecture (CGRA), offer significant potential for architectural exploration. Many emerging AI accelerators (e.g., Cerebras and Groq) are built on reconfigurability and dataflow design principles, often combining significantly distributed on-chip memories, high-speed interconnects, and domain-specific languages. In this project,  we will evaluate existing reconfigurable architectures and explore hardware designs to accelerate our target workloads, which include numerical algorithms, streaming data compression, and real-time AI at the edge. We will also investigate architecture designs, design workflow (design, verification, layout, etc.), compiler technologies, architecture emulation/simulation, and emerging technologies such as Chiplet, structured ASICs, and FPGA/CGRA generators. We aim to demonstrate enhanced computing efficiency of selected workloads on reconfigurable architectures and highlight the potential of custom hardware designs even for extensive distributed resources.</p>
+
+<h2 id="results-for-20232024">Results for 2023/2024</h2>
+
+<ul>
+  <li>organized a break-out session at the JLESC 15th workshop in France and a workshop at the HEART symposium in Japan.</li>
+  <li>published two co-authored papers at workshops held with SC23. We released the source code associated with the SC23 DRBSD paper.</li>
+</ul>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<ul>
+  <li><span class="person given-name">Kazutomo</span> <span class="person sur-name">Yoshii</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) visited RIKEN for two days in June 2023 to discuss the streaming hardware compressor design.</li>
+  <li><span class="person given-name">Juan</span> <span class="person sur-name">Miguel de Haro</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) visited RIKEN as an intern in 2023 to port the OmpSs@FPGA infrastructure to ESSPER.</li>
+  <li><span class="person given-name">Carlos</span> <span class="person sur-name">Alvarez</span> (<abbr title="Centro Nacional de Supercomputación" class="initialism" data-toggle="tooltip">BSC</abbr>) visited RIKEN in June 2023 to discuss porting the OmpSs@FPGA infrastructure to ESSPER.</li>
+  <li><span class="person given-name">Tomohiro</span> <span class="person sur-name">Ueno</span> (<abbr title="RIKEN Center for Computational Science" class="initialism" data-toggle="tooltip">R-CCS</abbr>) visited ANL in May 2023 to discuss hardware compressors and accelerator designs.</li>
+</ul>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<ul>
+  <li>A paper at Smokey Mountain Conference 2021 on hardware co-design methodology <a class="citation" href="#yoshii2021hardware">(Yoshii et al. 2021)</a></li>
+  <li>A paper at IEEE ASAP 2021 on virtualization of networks of FPGA clusters <a class="citation" href="#ueno2021virtual">(Ueno, Koshiba, and Sano 2021)</a></li>
+  <li>A paper at SC23 PMBS workshop <a class="citation" href="#yoshii2023hardware">(Yoshii et al. 2023)</a></li>
+  <li>A paper at SC23 DRBS workshop <a class="citation" href="#yoshii2023streaming">(Yoshii et al. 2023)</a></li>
+</ul>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          yoshii2023hardware
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseyoshii2023hardwareBibtex" aria-expanded="false" aria-controls="collapseyoshii2023hardwareBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseyoshii2023hardwareAbstract" aria-expanded="false" aria-controls="collapseyoshii2023hardwareAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="yoshii2023hardware">Yoshii, Kazutomo, John Tramm, Bryce Allen, Tomohiro Ueno, Kentaro Sano, Andrew Siegel, and Pete Beckman. 2023. “Hardware Specialization: Estimating Monte Carlo Cross-Section Lookup Kernel Performance and Area.” In <i>Proceedings of the SC’23 Workshops of The International Conference on High Performance Computing, Network, Storage, and Analysis</i>, 1274–78.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseyoshii2023hardwareBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{yoshii2023hardware,
+  title = {Hardware specialization: Estimating Monte Carlo cross-section lookup kernel performance and area},
+  author = {Yoshii, Kazutomo and Tramm, John and Allen, Bryce and Ueno, Tomohiro and Sano, Kentaro and Siegel, Andrew and Beckman, Pete},
+  booktitle = {Proceedings of the SC'23 Workshops of The International Conference on High Performance Computing, Network, Storage, and Analysis},
+  pages = {1274--1278},
+  year = {2023}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          yoshii2023streaming
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseyoshii2023streamingBibtex" aria-expanded="false" aria-controls="collapseyoshii2023streamingBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseyoshii2023streamingAbstract" aria-expanded="false" aria-controls="collapseyoshii2023streamingAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="yoshii2023streaming">Yoshii, Kazutomo, Tomohiro Ueno, Kentaro Sano, Antonino Miceli, and Franck Cappello. 2023. “Streaming Hardware Compressor Generator Framework.” In <i>Proceedings of the SC’23 Workshops of The International Conference on High Performance Computing, Network, Storage, and Analysis</i>, 289–97.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseyoshii2023streamingBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{yoshii2023streaming,
+  title = {Streaming Hardware Compressor Generator Framework},
+  author = {Yoshii, Kazutomo and Ueno, Tomohiro and Sano, Kentaro and Miceli, Antonino and Cappello, Franck},
+  booktitle = {Proceedings of the SC'23 Workshops of The International Conference on High Performance Computing, Network, Storage, and Analysis},
+  pages = {289--297},
+  year = {2023}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          yoshii2021hardware
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseyoshii2021hardwareBibtex" aria-expanded="false" aria-controls="collapseyoshii2021hardwareBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseyoshii2021hardwareAbstract" aria-expanded="false" aria-controls="collapseyoshii2021hardwareAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="yoshii2021hardware">Yoshii, Kazutomo, Rajesh Sankaran, Sebastian Strempfer, Maksim Levental, Mike Hammer, and Antonino Miceli. 2021. “A Hardware Co-Design Workflow for Scientific Instruments at the Edge.”</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseyoshii2021hardwareBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@misc{yoshii2021hardware,
+  title = {A Hardware Co-design Workflow for Scientific Instruments at the Edge},
+  author = {Yoshii, Kazutomo and Sankaran, Rajesh and Strempfer, Sebastian and Levental, Maksim and Hammer, Mike and Miceli, Antonino},
+  year = {2021},
+  eprint = {2111.01380},
+  archiveprefix = {arXiv},
+  primaryclass = {physics.ins-det}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ueno2021virtual
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseueno2021virtualBibtex" aria-expanded="false" aria-controls="collapseueno2021virtualBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseueno2021virtualAbstract" aria-expanded="false" aria-controls="collapseueno2021virtualAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="ueno2021virtual">Ueno, Tomohiro, Atsushi Koshiba, and Kentaro Sano. 2021. “Virtual Circuit-Switching Network with Flexible Topology for High-Performance FPGA Cluster.” In <i>2021 IEEE 32nd International Conference on Application-Specific Systems, Architectures and Processors (ASAP)</i>, 41–48. IEEE.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseueno2021virtualBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{ueno2021virtual,
+  title = {Virtual Circuit-Switching Network with Flexible Topology for High-Performance FPGA Cluster},
+  author = {Ueno, Tomohiro and Koshiba, Atsushi and Sano, Kentaro},
+  booktitle = {2021 IEEE 32nd International Conference on Application-specific Systems, Architectures and Processors (ASAP)},
+  pages = {41--48},
+  year = {2021},
+  organization = {IEEE}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>We evaluate existing reconfigurable architectures and explore hardware designs to accelerate our target workloads. These include numerical algorithms, streaming data compression, and real-time AI at the edge. We will also investigate various architecture designs, the design workflow (including design, verification, layout, etc.), compiler technologies, architecture emulation/simulation, and emerging technologies such as Chiplets, structured ASICs, and FPGA/CGRA generators. Our goal is to demonstrate the enhanced computing efficiency of selected workloads on reconfigurable architectures and highlight the potential of custom hardware designs, even for extensive distributed resources.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"></ol>
+</div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/arch_reconf/';
+      this.page.identifier = '/projects/arch_reconf/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
+</html>

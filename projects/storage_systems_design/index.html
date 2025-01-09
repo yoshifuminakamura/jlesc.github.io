@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Leverage Blue Waters I/O Traces to Size and Allocate Future Storage Systems - Jekyll Advance</title>
+
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/storage_systems_design/"/>
+
+  <meta property="og:title" content="Leverage Blue Waters I/O Traces to Size and Allocate Future Storage Systems"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+</div>
+
+
+
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/fellows.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Fellows</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/early_career.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Early Career</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
+    
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
+          </div>
+          <div class="post-title">
+            <h1>Leverage Blue Waters I/O Traces to Size and Allocate Future Storage Systems</h1>
+          </div>
+          
+
+          
+
+          <ul class="event-meta mb-2">
+              
+              
+              
+              <li><b>Head</b></li>
+              
+              
+              <li>Tessier Francois (INRIA)</li>
+              
+              
+              <li><b>Members</b></li>
+              
+              
+              
+              <li>
+                  Kramer Bill ()
+              </li>
+              
+              
+              
+              <li>
+                  Antoniu Gabriel (INRIA)
+              </li>
+              
+              
+              
+              <li>
+                  Monniot Julien (INRIA)
+              </li>
+              
+              
+              
+              <li>
+                  Jolivel Théo (INRIA)
+              </li>
+              
+              
+              
+              
+              
+              
+          </ul>
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
+<p>In recent years, to address the growing gap between computing power and I/O bandwidth, storage tiers have multiplied within supercomputers. While the paradigm until then was a shared global file system (Lustre, IBM Storage Scale, …), storage is now available in a disaggregated form, still presenting a centralized storage system but completed with several intermediate layers such as node-local disks, burst buffers or network-attached storage (NVMeoF, CXL) to name a few.</p>
+
+<p>This profusion of different technologies and architectures makes the use of these resources complex and their sizing at the machine design stage risky. One approach to partially solving these problems is to model supercomputers equipped with several levels of storage, coupled with the simulation of the scheduling of an execution history of large-scale I/O intensive applications. This type of simulation allows us to observe the behavior of storage tiers in the face of real-world workloads. Recently, following the decommissioning of the machine, several years of execution traces (including I/O traces) of applications that ran on Blue Waters have been made public. This mass of information is invaluable to feed simulations and study the architecture of modern storage systems.</p>
+
+<p>In this JLESC project, we propose to analyze Darshan traces and Lustre metrics from several years of Blue Waters production to feed StorAlloc <a class="citation" href="#monniot:hal-03683568">(Monniot et al. 2022)</a>, a simulator of a storage-aware job scheduler developed within the Inria KerData’s team. The goal of work is twofold: to provide a post-mortem study on the sizing of Blue Waters’ storage system and to explore the design of future highly storage-disaggregated HPC systems.</p>
+
+<h2 id="results-for-20232024">Results for 2023/2024</h2>
+<p>We introduce Fives, a storage system simulator based on WRENCH and SimGrid, two simulation frameworks in the field. Fives, currently under development, is capable of reproducing the behavior of a Lustre file system. Using Darshan execution traces to both calibrate and validate the simulator, Fives can extract a number of metrics and correlation indices demonstrating a reasonable level of accuracy between real and simulated I/O times. The traces currently used in Fives come from machines for which only aggregated Darshan traces are publicly available. We are currently working on using Blue Waters traces to feed our simulator.</p>
+
+<p>A paper presenting our first results is in preparation and will be submitted in the first half of 2024.</p>
+
+<p>In a second time, we will consider new calibration opportunities offered by the union of Blue Waters Darshan, Torque (resource manager) and Lustre traces. In particular, we expect this new data to allow finer calibration and validation of the Lustre model inside our simulator.</p>
+
+<h2 id="results-for-20242025">Results for 2024/2025</h2>
+<p>A conference paper presenting Fives <a class="citation" href="#monniotEtAl2024">(Monniot et al. 2024)</a>, an HPC storage system simulator, has been accepted at HiPC’24 (Bengalore, India). Although Fives uses Darshan traces from an ANL system (Theta), an extended version of the paper exploiting Blue Waters traces is in preparation.</p>
+
+<p>We also introduced MOSAIC <a class="citation" href="#jolivelEtAl2024">(Jolivel et al. 2024)</a>, an approach to categorize execution traces and give information about the general behavior of applications from an I/O perspective. we analyze a full year of I/O execution traces of Blue Waters from which, we determine a set of non-exclusive categories to describe the I/O behavior of jobs, including the temporality and the periodicity of the accesses and the metadata overhead. This paper has been accepted in the SC’24 PDSW workshop. This work is currently being pursued, with several lines of research focusing in particular on automating the clustering of I/O operations.</p>
+
+<h2 id="references">References</h2>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          monniotEtAl2024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsemonniotEtAl2024Bibtex" aria-expanded="false" aria-controls="collapsemonniotEtAl2024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsemonniotEtAl2024Abstract" aria-expanded="false" aria-controls="collapsemonniotEtAl2024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="monniotEtAl2024">Monniot, Julien, François Tessier, Henri Casanova, and Gabriel Antoniu. 2024. “Simulation of Large-Scale HPC Storage Systems: Challenges and Methodologies.” In <i>HiPC 2024 - 31st IEEE International Conference on High Performance Computing, Data, and Analytics</i>, 1–11. Bangalore, India. <a href="https://inria.hal.science/hal-04784808" target="_blank">https://inria.hal.science/hal-04784808</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsemonniotEtAl2024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{monniotEtAl2024,
+  title = {{Simulation of Large-Scale HPC Storage Systems: Challenges and Methodologies}},
+  author = {Monniot, Julien and Tessier, Fran{\c c}ois and Casanova, Henri and Antoniu, Gabriel},
+  url = {https://inria.hal.science/hal-04784808},
+  booktitle = {{HiPC 2024 - 31st IEEE International Conference on High Performance Computing, Data, and Analytics}},
+  address = {Bangalore, India},
+  pages = {1-11},
+  year = {2024},
+  month = dec,
+  keywords = {HPC ; Storage ; Modeling ; Simulation},
+  pdf = {https://inria.hal.science/hal-04784808v1/file/Simulation_based_Study_of_a_Large_Scale_Storage_System-2.pdf},
+  hal_id = {hal-04784808},
+  hal_version = {v1}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          jolivelEtAl2024
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsejolivelEtAl2024Bibtex" aria-expanded="false" aria-controls="collapsejolivelEtAl2024Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsejolivelEtAl2024Abstract" aria-expanded="false" aria-controls="collapsejolivelEtAl2024Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="jolivelEtAl2024">Jolivel, Théo, François Tessier, Julien Monniot, and Guillaume Pallez. 2024. “MOSAIC: Detection and Categorization of I/O Patterns in HPC Applications.” In <i>PDSW 2024</i>. Atlanta, United States. https://doi.org/10.1109/SCW63240.2024.00172.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsejolivelEtAl2024Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{jolivelEtAl2024,
+  title = {{MOSAIC: Detection and Categorization of I/O Patterns in HPC Applications}},
+  author = {Jolivel, Th{\'e}o and Tessier, Fran{\c c}ois and Monniot, Julien and Pallez, Guillaume},
+  url = {https://hal.science/hal-04808300},
+  booktitle = {{PDSW 2024}},
+  address = {Atlanta, United States},
+  year = {2024},
+  month = nov,
+  doi = {10.1109/SCW63240.2024.00172},
+  keywords = {characterization ; analysis ; I/O ; HPC},
+  pdf = {https://hal.science/hal-04808300v1/file/PDSW24_Workshop_Paper-7.pdf},
+  hal_id = {hal-04808300},
+  hal_version = {v1}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          monniot:hal-03683568
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsemonniot:hal-03683568Bibtex" aria-expanded="false" aria-controls="collapsemonniot:hal-03683568Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsemonniot:hal-03683568Abstract" aria-expanded="false" aria-controls="collapsemonniot:hal-03683568Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="monniot:hal-03683568">Monniot, Julien, François Tessier, Matthieu Robert, and Gabriel Antoniu. 2022. “StorAlloc: A Simulator for Job Scheduling on Heterogeneous Storage Resources.” In <i>HeteroPar 2022</i>. Glasgow, United Kingdom. <a href="https://inria.hal.science/hal-03683568" target="_blank">https://inria.hal.science/hal-03683568</a>.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsemonniot:hal-03683568Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{monniot:hal-03683568,
+  title = {{StorAlloc: A Simulator for Job Scheduling on Heterogeneous Storage Resources}},
+  author = {Monniot, Julien and Tessier, Fran{\c c}ois and Robert, Matthieu and Antoniu, Gabriel},
+  url = {https://inria.hal.science/hal-03683568},
+  booktitle = {{HeteroPar 2022}},
+  address = {Glasgow, United Kingdom},
+  year = {2022},
+  month = aug,
+  pdf = {https://inria.hal.science/hal-03683568v2/file/StorAlloc_2022.pdf},
+  hal_id = {hal-03683568},
+  hal_version = {v2}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+</div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/storage_systems_design/';
+      this.page.identifier = '/projects/storage_systems_design/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
+</html>

@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Architecture and Hyperparameter Search for Super-Resolution Networks Operating on Medical Images - Jekyll Advance</title>
+
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/hyperp_sr_project/"/>
+
+  <meta property="og:title" content="Architecture and Hyperparameter Search for Super-Resolution Networks Operating on Medical Images"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+</div>
+
+
+
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/fellows.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Fellows</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/early_career.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Early Career</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
+    
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
+          </div>
+          <div class="post-title">
+            <h1>Architecture and Hyperparameter Search for Super-Resolution Networks Operating on Medical Images</h1>
+          </div>
+          
+
+          
+
+          <ul class="event-meta mb-2">
+              
+              
+              
+              <li><b>Head</b></li>
+              
+              
+              <li>Liu Xin (JSC)</li>
+              
+              
+              <li><b>Members</b></li>
+              
+              
+              
+              <li>
+                  Lintermann Andreas (JSC)
+              </li>
+              
+              
+              
+              <li>
+                  Rüttgers Mario (JSC)
+              </li>
+              
+              
+              
+              <li>
+                  Aach Marcel (JSC)
+              </li>
+              
+              
+              
+              <li>
+                  Egele Romain (ANL)
+              </li>
+              
+              
+              
+              <li>
+                  Balaprakash Prasanna (ANL)
+              </li>
+              
+              
+              
+              
+              
+              
+          </ul>
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
+<p>Diagnosis of pathologies in the human respiratory system have recently included results of computational fluid dynamics (CFD) simulations, which allow numerical quantification of respiratory flows by the pressure loss, the temperature distribution, etc. <a class="citation" href="#lintermann2013fluid">(Lintermann, Meinke, and Schröder 2013)</a>. Highly resolved computational meshes based on computer tomography (CT) images are necessary to accurately simulate the respiratory flow. However, clinical CT image resolution is often limited by radiation dose and acquisition time. Super-resolution networks (SRNs) have the potential to increase the resolution of images a posterior the recording. In this project, SRNs are employed and optimized to recover high-resolution (HR) from low-resolution (LR) CT images. SRNs predictions are validated by comparing the results of CFD simulations, carried out with the highly scalable lattice-Boltzmann method (LBM) <a class="citation" href="#lintermann2020zonal">(Lintermann, Meinke, and Schröder 2020)</a>.</p>
+
+<p>The performance of SRNs is highly dependent on the hyperparameters, either related to model architecture or optimizer. Finding the optimal architectures and hyperparameters is limited by computational resources as the search space is often too large to explore exhaustively. The DeepHyper (DH) framework aims to tackle these challenges by employing an asynchronous Bayesian optimization (BO) approach for hyperparameter and architecture search at HPC scale <a class="citation" href="#balaprakash2018deephyper">(Balaprakash et al. 2018)</a>. Another limitation of existing SRNs is that they provide forecasts without any uncertainty estimates. In this project, the developers will build on DeepHyper’s automated deep ensemble for uncertainty quantification capability (AutoDEUQ). DeepHyper/AutoDEUQ estimates aleatoric and epistemic uncertainties by: automatically generating a catalog of neural networks models through joint neural architecture and hyperparameter search, wherein each model is trained to model the distribution of the data; and selecting a set of high-performing models to construct the ensembles, and estimating aleatoric and epistemic uncertainties from the generated model ensembles.</p>
+
+<p>It is the aim of the proposed cooperation to investigate architecture and hyperparameter search algorithms for SRNs for enhancing resolution of CT images. This includes performance, scalability, and accuracy analyses of DH. The findings will be juxtaposed to those obtained employing similar tools for distributed hyperparameter optimization such as Ray Tune. JSC brings in its knowledge about SRNs, medical data, and CFD simulations, and ANL contributes with its expertise in architecture and hyperparameter search in general, and in employing DH on HPC systems.</p>
+
+<h2 id="results-for-20212022">Results for 2021/2022</h2>
+<p>The dataset consists of CT head recording from 65 patients. HR images were 1mm thick axial slices with matrix size of 512*512. LR images were generated by taking average of 3 adjacent HR slices, and the middle HR slice was taken as ground truth. The architecture of original U-net <a class="citation" href="#ronneberger2015u">(Ronneberger, Fischer, and Brox 2015)</a> was built with batch normalization, trained with LR image as input and middle HR slice as label. For comparison, resolution was also resumed using spline interpolation. The trained network was tested on 3 patients, and the U-net prediction outperforms interpolation results by comparing peak signal-to-noise ratio. Surfaces were generated using U-net prediction, HR, LR images and interpolation results. LBM simulation was carried out <a class="citation" href="#lintermann2020zonal">(Lintermann, Meinke, and Schröder 2020)</a> for one of the patients and the averaged pressure loss between inlets and outlet was 9.695 Pa for HR, 8.965 Pa (-8.5 %) for LR, 7.706 Pa (-20.5 %) for interpolated, 9.849 Pa (+1.6 %) for U-net prediction. The above results are used as baseline for the current project.</p>
+
+<h2 id="results-for-20232024">Results for 2023/2024</h2>
+<p>In 2023, we started a collaboration with IAS-8 (Data Analytics and Machine Learning) in Forschungszentrum Jülich, to include a data efficient training method <a class="citation" href="#quercia2023">(Quercia et al. 2023)</a> to bias SGD towards more relevant image regions, leading to faster convergence and more stable results. By the end of 2023, we summarized current results and submitted to the JLESC special issue. In addition, a webpage applction has been under development using the JSC Coud computing resources, to allow users upload their coarse CT head data and make prediction of fine CT data uisng the SRN developed in this project.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+<ul>
+  <li>28-30, Sep 2022: Mario Rüttgers participated in 14th JLESC Workshop at The University of Illinois at Urbana-Champaign and started the collaboration</li>
+  <li>Project members had online kick-off meetings for detailed plans, and meet regularly to discuss progress</li>
+  <li>21-23, Mar 2023: Xin Liu participated in 15th JLESC Workshop at INRIA Bordeaux to present project progress</li>
+</ul>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+<ol class="bibliography"></ol>
+
+<h2 id="future-plans">Future plans</h2>
+<ul>
+  <li>Collection of best-practice methods for architecture and hyperparameter search for SRNs using different frameworks</li>
+  <li>Deployment of DH as a standard module for HPC systems at JSC</li>
+  <li>Manuscript for the special issue journal publication in the framework of the 15th JLESC workshop in Bordeaux, France</li>
+  <li>Develop and maintain the webpage application</li>
+</ul>
+
+<h2 id="references">References</h2>
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          quercia2023
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsequercia2023Bibtex" aria-expanded="false" aria-controls="collapsequercia2023Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsequercia2023Abstract" aria-expanded="false" aria-controls="collapsequercia2023Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="quercia2023">Quercia, Alessio, Abigail Morrison, Hanno Scharr, and Ira Assent. 2023. “Sgd Biased towards Early Important Samples for Efficient Training.” In <i>IEEE International Conference on Data Mining (ICDM)</i>. IEEE.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsequercia2023Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{quercia2023,
+  title = {Sgd biased towards early important samples for efficient training},
+  author = {Quercia, Alessio and Morrison, Abigail and Scharr, Hanno and Assent, Ira},
+  booktitle = {IEEE International Conference on Data Mining (ICDM)},
+  pages = {},
+  year = {2023},
+  organization = {IEEE}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          lintermann2020zonal
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapselintermann2020zonalBibtex" aria-expanded="false" aria-controls="collapselintermann2020zonalBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapselintermann2020zonalAbstract" aria-expanded="false" aria-controls="collapselintermann2020zonalAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="lintermann2020zonal">Lintermann, Andreas, Matthias Meinke, and Wolfgang Schröder. 2020. “Zonal Flow Solver (ZFS): a Highly Efficient Multi-Physics Simulation Framework.” <i>International Journal of Computational Fluid Dynamics</i> 34 (7-8): 458–85.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapselintermann2020zonalBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{lintermann2020zonal,
+  title = {Zonal Flow Solver (ZFS): a highly efficient multi-physics simulation framework},
+  author = {Lintermann, Andreas and Meinke, Matthias and Schr{\"o}der, Wolfgang},
+  journal = {International journal of computational fluid dynamics},
+  volume = {34},
+  number = {7-8},
+  pages = {458--485},
+  year = {2020},
+  publisher = {Taylor \&amp; Francis}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          balaprakash2018deephyper
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsebalaprakash2018deephyperBibtex" aria-expanded="false" aria-controls="collapsebalaprakash2018deephyperBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsebalaprakash2018deephyperAbstract" aria-expanded="false" aria-controls="collapsebalaprakash2018deephyperAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="balaprakash2018deephyper">Balaprakash, Prasanna, Michael Salim, Thomas D Uram, Venkat Vishwanath, and Stefan M Wild. 2018. “DeepHyper: Asynchronous Hyperparameter Search for Deep Neural Networks.” In <i>2018 IEEE 25th International Conference on High Performance Computing (HiPC)</i>, 42–51. IEEE.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsebalaprakash2018deephyperBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{balaprakash2018deephyper,
+  title = {DeepHyper: Asynchronous hyperparameter search for deep neural networks},
+  author = {Balaprakash, Prasanna and Salim, Michael and Uram, Thomas D and Vishwanath, Venkat and Wild, Stefan M},
+  booktitle = {2018 IEEE 25th international conference on high performance computing (HiPC)},
+  pages = {42--51},
+  year = {2018},
+  organization = {IEEE}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          ronneberger2015u
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseronneberger2015uBibtex" aria-expanded="false" aria-controls="collapseronneberger2015uBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseronneberger2015uAbstract" aria-expanded="false" aria-controls="collapseronneberger2015uAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="ronneberger2015u">Ronneberger, Olaf, Philipp Fischer, and Thomas Brox. 2015. “U-Net: Convolutional Networks for Biomedical Image Segmentation.” In <i>International Conference on Medical Image Computing and Computer-Assisted Intervention</i>, 234–41. Springer.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseronneberger2015uBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{ronneberger2015u,
+  title = {U-net: Convolutional networks for biomedical image segmentation},
+  author = {Ronneberger, Olaf and Fischer, Philipp and Brox, Thomas},
+  booktitle = {International Conference on Medical image computing and computer-assisted intervention},
+  pages = {234--241},
+  year = {2015},
+  organization = {Springer}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          lintermann2013fluid
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapselintermann2013fluidBibtex" aria-expanded="false" aria-controls="collapselintermann2013fluidBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapselintermann2013fluidAbstract" aria-expanded="false" aria-controls="collapselintermann2013fluidAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="lintermann2013fluid">Lintermann, Andreas, Matthias Meinke, and Wolfgang Schröder. 2013. “Fluid Mechanics Based Classification of the Respiratory Efficiency of Several Nasal Cavities.” <i>Computers in Biology and Medicine</i> 43 (11): 1833–52.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapselintermann2013fluidBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{lintermann2013fluid,
+  title = {Fluid mechanics based classification of the respiratory efficiency of several nasal cavities},
+  author = {Lintermann, Andreas and Meinke, Matthias and Schr{\"o}der, Wolfgang},
+  journal = {Computers in biology and medicine},
+  volume = {43},
+  number = {11},
+  pages = {1833--1852},
+  year = {2013},
+  publisher = {Elsevier}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+</div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/hyperp_sr_project/';
+      this.page.identifier = '/projects/hyperp_sr_project/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
+</html>

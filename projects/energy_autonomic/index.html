@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Improving the Performance and Energy Efficiency of HPC Applications Using Autonomic Computing Techniques - Jekyll Advance</title>
+
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/energy_autonomic/"/>
+
+  <meta property="og:title" content="Improving the Performance and Energy Efficiency of HPC Applications Using Autonomic Computing Techniques"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+</div>
+
+
+
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/fellows.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Fellows</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/early_career.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Early Career</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
+    
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
+          </div>
+          <div class="post-title">
+            <h1>Improving the Performance and Energy Efficiency of HPC Applications Using Autonomic Computing Techniques</h1>
+          </div>
+          
+
+          
+
+          <ul class="event-meta mb-2">
+              
+              
+              
+              <li><b>Head</b></li>
+              
+              
+              <li>Rutten Eric ()</li>
+              
+              
+              <li><b>Members</b></li>
+              
+              
+              
+              <li>
+                  Perarnau Swann ()
+              </li>
+              
+              
+              
+              <li>
+                  Bleuse Raphaël ()
+              </li>
+              
+              
+              
+              <li>
+                  Cerf Sophie ()
+              </li>
+              
+              
+              
+              
+              
+              
+          </ul>
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>Behavior of HPC systems, such as performance, power consumption, thermal
+distribution, are increasingly hard to predict due to process variations and
+dynamic processors, which conflicts with conventional bulk synchronous
+parallelism software models such as MPI. Additionally, computing facilities are
+now interested in limiting computing resources by power/energy budget rather
+than CPU time. Such idea is also negatively affected by unpredictable behavior
+of modern HPC systems. Hardware-level power-limiting capability is becoming a
+standard feature in modern processors. Intel running average power limit
+(RAPL), for example, adjusts CPU core frequency (and CPU states if needed)
+periodically in order to limit the CPU power consumption not to exceed
+user-specified per-socket power budget. While RAPL, in fact, is an excellent
+mechanism for independent workloads, there are multiple considerations for HPC
+usage. The side effect of such power limiting is performance variation between
+cores/sockets/nodes; no mechanism to communicate between sockets or nodes. The
+effective range of user-specifiable power budget is limited; lower efficiency
+with lower power budget. They tend to be a hardware feature; not tuneable.</p>
+
+<p>We propose a software-level solution to provide additional control mechanisms
+that increase hardware power-limiting feature and work for multiple nodes by
+applying autonomic computing techniques and targeting HPC workloads.  We adopt
+an approach involving Autonomic Computing and Control Theory. We will identify
+significant sensors and actuators (e.g., switching on/off cores, changing CPU
+frequency), build adaptive models of the process to be controlled, and define
+robust adaptive control objectives w.r.t. appropriate metrics. We will design
+and experimentally validate controllers regulating consumption while ensuring
+performance. We will explore variants, beyond simple threshold-based control
+e.g., predictive control to avoid overshooting or adaptive control for
+robustness to the natural variability, considering costs of actions, avoiding
+oscillations and over-reaction, handle multiple criteria, coordinate multiple
+autonomic loops. Based on our previous experience in Cloud-oriented Autonomic
+Computing, we will generalize and explore novel issues in adapting our
+approaches to specificities of HPC and power management.</p>
+
+<h2 id="results-for-20192020">Results for 2019/2020</h2>
+
+<p>On the basis of the preliminary work done at ANL on instrumentation of HPC
+applications, INRIA has begun work on a range of controllers for the runtime
+adaptation of the Power Cap level in RAPL. A first approach is considered,
+re-using results on other work concerning a different problem (regulating the
+degree of parallelism according to synchronization cost), but which could be
+transferred here. Another approach involves measuring progress and power and
+making decisions based on predictions.</p>
+
+<p>Argonne completed the design and implementation of an infrastructure to perform
+control experiments using Jupyter notebooks. This infrastructure can be
+deployed on a wide range of servers, and allows collaborators to independently
+implement their own control algorithm using a simple interface and a high level
+language. The notebook then connect remotely to the existing Argo NRM
+infrastructure, that keeps track of actuators, sensors and application
+management.</p>
+
+<h2 id="results-for-20202021">Results for 2020/2021</h2>
+
+<p><span class="person given-name">Sophie</span> <span class="person sur-name">Cerf</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) started working as an INRIA-funded postdoc on this project
+in October 2020. Using the Jupyter notebook infrastructure and Grid’5000, we
+are in the process on designing and validating control-theory based approaches
+to the problem of power/performance efficiency, with RAPL as the main actuator.
+We have identified our main objective for HPC systems: as applications
+dynamically undergo variations in workload, due to phases or data/compute
+movement between devices, one can dynamically adjust power across compute
+elements to save energy with limited and controllable impact on application
+performance. We are also focusing on leveraging preliminary work from Argonne
+on periodical monitoring of application progress.</p>
+
+<p>We are in the process of publishing our first study, using a preliminary
+offline identification process to derive a model of the dynamics of the system
+and a proportional-integral (PI) controller, on top of the Argo NRM
+infrastructure.</p>
+
+<h2 id="results-for-20212022">Results for 2021/2022</h2>
+
+<p>We published our first study, using a preliminary offline identification
+process to derive a proportional-integral (PI) controller on top of the Argo
+NRM infrastructure, at Euro-Par 2021 <a class="citation" href="#cerf2021europar">(Cerf et al. 2021)</a>. This study
+includes a controller applied to several Grid5000 clusters, and controlling a
+singe memory-bound application, using Intel RAPL for power control.</p>
+
+<p>A second publication is in the works, more on the control theory aspects of the
+work. Following this, we will work on expanding our control design process to
+allow for various types of applications and applications with phases in
+particular. The goal is to improve the NRM infrastructure and the controller
+design to detect phases in application performance and adapt the control to
+them.</p>
+
+<p><span class="person given-name">Valentin</span> <span class="person sur-name">Reis</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) left Argonne for Groq in March 2021. <span class="person given-name">Idriss</span> <span class="person sur-name">Daoudi</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>)
+started working as an ANL-funded postdoc on this project in October 2021. <span class="person given-name">Sophie</span> <span class="person sur-name">Cerf</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>)
+became an INRIA research scientist in Lille in October 2021.</p>
+
+<h2 id="results-for-20222023">Results for 2022/2023</h2>
+
+<p>We published our second publication, involving results from the MSc internship
+of Ismail Hawila <a class="citation" href="#hawila2022ccta">(Hawila et al. 2022)</a>. Observing limitations of our
+previous work regarding both modeling (nonlinear models with numerous
+parameters) and control performance (mainly instability caused by platform
+variations), we developed a novel adaptive control that is robust to the variety
+of execution platforms while maintaining the existing global goals of energy
+management. It improves the reusability and portability of our controller. We
+evaluated, on a real system using the Grid’5000 testbed, the robustness of the
+control to changes in initial parameters and to disturbances, and we compared it
+with the previous proportional-integral (PI) control. Our adaptive control
+approach allows for up to 25% energy savings.</p>
+
+<p>We continue to improve the NRM infrastructure for robustness, and the
+evaluation of our control schemes towards supporting more applications and more
+hardware control knobs.</p>
+
+<h2 id="results-for-20232024">Results for 2023/2024</h2>
+
+<p>A MSc internship at Inria Lille, co-advised by <span class="person given-name">Sophie</span> <span class="person sur-name">Cerf</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) and <span class="person given-name">Raphaël</span> <span class="person sur-name">Bleuse</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) at Inria Grenoble, was performed by Kouds Halitim, on
+“Enhancing Efficiency through Control theory in Compute-Intensive
+Applications”. It extended on previous work by adding a compute-intensive
+benchmark (NAS EP) to possible workloads. Modeling was carried-out on extensive
+experimentations on various Grid’5000 clusters, following the identification
+techniques from Control Theory. The approach additionally explored novel
+control strategies, in the form of cascaded control such as PI control and MPC
+to enable better robustness e.g., w.r.t. noisy signals from sensors. INRIA
+hired an engineer, Jonathan Bleuzen, as a support for experimentations around
+NRM, and automation of identification and validation of controller on
+Grid’5000.  The NRM infrastructure continues to improve, a new software release
+with better stability and event management, as well as additional actuators is
+scheduled for early 2024.</p>
+
+<p>We are working on a journal paper to be submitted, on the methodological and
+instrumentation aspects of implementing managers, based on Control Theory or
+Reinforcement Learning, in HPC systems, based on our experiences, and
+documenting the concrete problems of implementing sensors and actuators, as
+well as integrating the controllers.</p>
+
+<h2 id="visits-and-meetings">Visits and meetings</h2>
+
+<p>We schedule regular video meetings between the different members of the
+project.</p>
+
+<p><span class="person given-name">Eric</span> <span class="person sur-name">Rutten</span> (<abbr title="Institut national de recherche en informatique et en automatique" class="initialism" data-toggle="tooltip">INRIA</abbr>) visited ANL for two days to make progress on the project
+on April 18-19 2019.</p>
+
+<p><span class="person given-name">Swann</span> <span class="person sur-name">Perarnau</span> (<abbr title="Argonne National Laboratory" class="initialism" data-toggle="tooltip">ANL</abbr>) visited INRIA in December 2023.</p>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          hawila2022ccta
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsehawila2022cctaBibtex" aria-expanded="false" aria-controls="collapsehawila2022cctaBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsehawila2022cctaAbstract" aria-expanded="false" aria-controls="collapsehawila2022cctaAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="hawila2022ccta">Hawila, Ismail, Sophie Cerf, Raphaël Bleuse, Swann Perarnau, and Éric Rutten. 2022. “Adaptive Power Control for Sober High-Performance Computing.” In <i>6th IEEE Conference on Control Technology and Applications</i>. IEEE.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsehawila2022cctaBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{hawila2022ccta,
+  author = {Hawila, Ismail and Cerf, Sophie and Bleuse, Rapha{\"e}l and Perarnau, Swann and Rutten, {\'E}ric},
+  booktitle = {6th IEEE Conference on Control Technology and Applications},
+  title = {Adaptive Power Control for Sober High-Performance Computing},
+  year = {2022},
+  publisher = {IEEE}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          cerf2021europar
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapsecerf2021europarBibtex" aria-expanded="false" aria-controls="collapsecerf2021europarBibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapsecerf2021europarAbstract" aria-expanded="false" aria-controls="collapsecerf2021europarAbstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="cerf2021europar">Cerf, Sophie, Raphaël Bleuse, Valentin Reis, Swann Perarnau, and Éric Rutten. 2021. “Sustaining Performance While Reducing Energy Consumption: A Control Theory Approach.” In <i>Euro-Par 2021: Parallel Processing</i>. Springer International Publishing. https://doi.org/10.1007/978-3-030-85665-6_21.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapsecerf2021europarBibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@inproceedings{cerf2021europar,
+  title = {{Sustaining Performance While Reducing Energy Consumption: A Control Theory Approach}},
+  author = {Cerf, Sophie and Bleuse, Rapha{\"e}l and Reis, Valentin and Perarnau, Swann and Rutten, {\'E}ric},
+  booktitle = {Euro-Par 2021: Parallel Processing},
+  year = {2021},
+  doi = {10.1007/978-3-030-85665-6_21},
+  publisher = {Springer International Publishing}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>We now have a reasonable collection of controller designs to experiment on, and
+are focusing on improving our designs towards a wider range of benchmarks. Our
+experience is that adding applications to monitor or control tends to highlight
+shortcomings in the controller designs or the signals used to characterize
+performance.  Given the expected architectures on future systems, we are also
+planning to evaluate different actuators than RAPL (i.e. accelerator power
+capping). We also plan to consider more elaborate control techniques, to obtain
+controllers that are more robust to generic applications, including phases,
+tracing OpenMP or MPI, or using performance counters in monitoring.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"></ol>
+</div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/energy_autonomic/';
+      this.page.identifier = '/projects/energy_autonomic/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
+</html>

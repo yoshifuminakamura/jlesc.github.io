@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Malleable implementation of SERGHEI-SWE with DMR - Jekyll Advance</title>
+
+
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="/projects/serghei-dmr/"/>
+
+  <meta property="og:title" content="Malleable implementation of SERGHEI-SWE with DMR"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@zerostaticio" />
+<meta name="twitter:creator" content="@zerostaticio" />
+
+    <link rel="icon" href="/assets/images/favicon/favicon.png">
+    <link href="/assets/css/main.css" rel="stylesheet">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
+
+    
+
+  </head>
+<body class="page page-post page-post-1 has-fixed-header">
+
+
+<div class="menu-main-mobile " id="menu-main-mobile">
+
+  <div class="menu-main-mobile-top">
+    <div id="close-overlay" class="menu-main-close">
+      <div class="hamburger"></div>
+    </div>
+  </div>
+
+  <div class="menu-main-mobile-center">
+    
+      <ul class="menu">
+        
+          <li class="menu-item-about">
+            <a href="/#about">About</a>
+          </li>
+        
+          <li class="menu-item-news">
+            <a href="/news/">News</a>
+          </li>
+        
+          <li class="menu-item-events">
+            <a href="/events/">Events</a>
+          </li>
+        
+          <li class="menu-item-research">
+            <a href="">Research</a>
+          </li>
+        
+          <li class="menu-item-references">
+            <a href="/references">References</a>
+          </li>
+        
+          <li class="menu-item-how to">
+            <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+          </li>
+        
+      </ul>
+    
+  </div>
+</div>
+
+
+
+
+<div id="header" class='header bg-base-bg-4 header-fixed'>
+    <div class="container">
+      <div class="logos">
+  <div class="logo logo-desktop">
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-desktop-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+  <div class="logo logo-mobile">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+    
+  </div>
+
+
+  <div class="logo logo-mobile-invert">
+    
+    
+  
+    
+      <div class="logo-text"><a href="/">JLESC</a></div>
+    
+
+  </div>
+
+</div>
+
+
+      <div class="menu-main">
+  <ul>
+    
+      
+        <li class="menu-item-dropdown menu-item-About">
+          <a href="/#about">About <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/#about" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">JLESC</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/partners.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Partners</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/fellows.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Fellows</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/people" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">People</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/grants.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Grants</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/about/early_career.html" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Early Career</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/news/">News</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/events/">Events</a>
+        </li>
+      
+    
+      
+        <li class="menu-item-dropdown menu-item-Research">
+          <a href="">Research <i class="fa-solid fa-chevron-down"></i></a>
+          
+          <div class="dropdown-menu">
+            
+              <a href="/research/collaboration" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Collaboration</div>
+                  
+                </div>
+
+              </a>
+
+            
+              <a href="/projects" class="dropdown-item ">
+                
+                
+
+                <div class="dropdown-item-content">
+                  <div class="dropdown-item-name">Projects</div>
+                  
+                </div>
+
+              </a>
+
+            
+          </div>
+
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="/references">References</a>
+        </li>
+      
+    
+      
+        
+        <li class="">
+          <a href="https://github.com/JLESC/jlesc.github.io/wiki">How to</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+      
+      <div class="hamburger-trigger" id="toggle-menu-main-mobile">
+  <button class="hamburger">Menu</button>
+</div>
+  </div>
+</div>
+
+
+<div id="wrapper" class="wrapper" style="margin-top: 60px;">
+  <div class="section">
+  <div class="container post-header">
+
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+          
+          <div class="post-categories">
+          
+
+
+  
+
+          
+          </div>
+          <div class="post-title">
+            <h1>Malleable implementation of SERGHEI-SWE with DMR</h1>
+          </div>
+          
+
+          
+
+          <ul class="event-meta mb-2">
+              
+              
+              
+              <li><b>Head</b></li>
+              
+              
+              <li>Iserte Sergio (BSC)</li>
+              
+              
+              <li><b>Members</b></li>
+              
+              
+              
+              <li>
+                  Morales-Hernández Mario (EXT)
+              </li>
+              
+              
+              
+              <li>
+                  Segovia José (EXT)
+              </li>
+              
+              
+              
+              <li>
+                  Vallés Pablo (EXT)
+              </li>
+              
+              
+              
+              <li>
+                  Daniel Caviedes-Voullième (JSC)
+              </li>
+              
+              
+              
+              <li>
+                  Peña Antonio J. ()
+              </li>
+              
+              
+              
+              
+              
+              
+          </ul>
+      </div>
+    </div>
+          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="section pt-0">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <div class="content"><h2 id="research-topic-and-goals">Research topic and goals</h2>
+
+<p>SERGHEI-SWE is a performance-portable high-performance parallel-computing shallow-water solver for hydrology and environmental studies. A key application is flood simulation, in which the wet computational domain can dramatically change size. Wet areas are much more computationally expensive to simulate than dry ones, so counting with additional data processing resources for high water stages is critical for providing results in a reasonable time frame. However, underutilizing the resources during dry stages harms the productivity and resource use efficiency of the HPC facility while being unfair to the rest of the users who see delayed their experiments. The variability of the flood size cannot be determined a priori, and therefore optimal resource selection for the job is difficult, especially for long simulations.</p>
+
+<p>This project aims to design, develop, and implement a malleable version of SERGHEI-SWE with the Dynamic Management of Resources (DMR) technology, providing a flexible framework for enabling malleability in HPC applications.</p>
+
+<p>This project aims to:</p>
+<ul>
+<li>Increase cluster productivity in terms of completed simulations per unit of time when running several instances of SERGHEI-SWE malleable in an HPC cluster.</li>
+<li>Extend DMR with performance-aware reconfiguration techniques.</li>
+<li>Design efficient data redistribution strategies for dynamic resources in SERGHEI-SWE.</li>
+</ul>
+
+<h2 id="impact-and-publications">Impact and publications</h2>
+
+<p>None yet.</p>
+
+<h2 id="future-plans">Future plans</h2>
+
+<p>Study new reconfiguration strategies and evaluate them in a large workload.</p>
+
+<h2 id="references">References</h2>
+
+<ol class="bibliography"><li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          Caviedes2023
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseCaviedes2023Bibtex" aria-expanded="false" aria-controls="collapseCaviedes2023Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary-outline col-xs-6" disabled="disabled" data-toggle="collapse" data-target="#collapseCaviedes2023Abstract" aria-expanded="false" aria-controls="collapseCaviedes2023Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="Caviedes2023">Caviedes-Voullième, Daniel, Mario Morales-Hernández, Matthew R. Norman, and Ilhan Özgen-Xian. 2023. “SERGHEI (SERGHEI-SWE) v1.0: a Performance-Portable High-Performance Parallel-Computing Shallow-Water Solver for Hydrology and Environmental Hydraulics.” <i>Geoscientific Model Development</i> 16 (3): 977–1008. https://doi.org/10.5194/gmd-16-977-2023.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseCaviedes2023Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{Caviedes2023,
+  author = {Caviedes-Voulli\`eme, Daniel and Morales-Hern\'andez, Mario and Norman, Matthew R. and \"Ozgen-Xian, Ilhan},
+  journal = {Geoscientific Model Development},
+  title = {{SERGHEI} ({SERGHEI}-{SWE}) v1.0: a performance-portable high-performance parallel-computing shallow-water solver for hydrology and environmental hydraulics},
+  year = {2023},
+  month = feb,
+  number = {3},
+  pages = {977--1008},
+  volume = {16},
+  doi = {10.5194/gmd-16-977-2023},
+  file = {:Caviedes2023.pdf:PDF},
+  groups = {Surface flows},
+  publisher = {Copernicus {GmbH}}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li>
+<li><div class="bibtex-entry-container">
+  <div class="d-flex flex-row flex-wrap">
+    <div class="col-md-3 col-sm-12 bibtex-ref-meta hidden">
+      <div class="row">
+        <div class="col-md-12 ref-label tag tag-default">
+          iserte_dmrlib_2021
+        </div>
+      </div>
+      <div class="row">
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseiserte_dmrlib_2021Bibtex" aria-expanded="false" aria-controls="collapseiserte_dmrlib_2021Bibtex">
+          BibTeX
+        </button>
+        <button class="btn btn-sm btn-secondary col-xs-6" data-toggle="collapse" data-target="#collapseiserte_dmrlib_2021Abstract" aria-expanded="false" aria-controls="collapseiserte_dmrlib_2021Abstract">
+          Abstract
+        </button>
+      </div>
+    </div>
+
+    <div class="bibtex-ref-entry col-md-9 col-sm-12">
+      <span id="iserte_dmrlib_2021">Iserte, Sergio, Rafael Mayo, Enrique S. Quintana-Ortí, and Antonio J. Peña. 2021. “DMRlib: Easy-Coding and Efficient Resource Management for Job Malleability.” <i>IEEE Transactions on Computers</i> 70 (9): 1443–57. https://doi.org/10.1109/TC.2020.3022933.</span>
+    </div>
+  </div>
+  <div class="collapse" id="collapseiserte_dmrlib_2021Bibtex">
+    <div class="row bibtex-ref-raw">
+      <div class="col-sm-10 offset-sm-1">
+        <pre><code>@article{iserte_dmrlib_2021,
+  title = {{DMRlib}: {Easy}-{Coding} and {Efficient} {Resource} {Management} for {Job} {Malleability}},
+  volume = {70},
+  copyright = {All rights reserved},
+  issn = {1557-9956},
+  shorttitle = {{DMRlib}},
+  url = {https://ieeexplore.ieee.org/document/9190024},
+  doi = {10.1109/TC.2020.3022933},
+  number = {9},
+  urldate = {2024-01-23},
+  journal = {IEEE Transactions on Computers},
+  author = {Iserte, Sergio and Mayo, Rafael and Quintana-Ortí, Enrique S. and Peña, Antonio J.},
+  month = sep,
+  year = {2021},
+  note = {Conference Name: IEEE Transactions on Computers},
+  pages = {1443--1457},
+  file = {Full Text:C\:\\Users\\siser\\Zotero\\storage\\7H5IJ6XY\\Iserte et al. - 2021 - DMRlib Easy-Coding and Efficient Resource Managem.pdf:application/pdf}
+}
+</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="collapse" id="collapseiserte_dmrlib_2021Abstract">
+    <div class="row bibtex-ref-abstract">
+      <div class="col-sm-10 offset-sm-1">
+        Process malleability has proved to have a highly positive impact on the resource utilization and global productivity in data centers compared with the conventional static resource allocation policy. However, the non-negligible additional development effort this solution imposes has constrained its adoption by the scientific programming community. In this work, we present DMRlib, a library designed to offer the global advantages of process malleability while providing a minimalist MPI-like syntax. The library includes a series of predefined communication patterns that greatly ease the development of malleable applications. In addition, we deploy several scenarios to demonstrate the positive impact of process malleability featuring different scalability patterns. Concretely, we study two job submission modes (rigid and moldable) in order to identify the best-case scenarios for malleability using metrics such as resource allocation rate, completed jobs per second, and energy consumption. The experiments prove that our elastic approach may improve global throughput by a factor higher than 3x compared to the traditional workloads of non-malleable jobs.
+      </div>
+    </div>
+  </div>
+  
+</div>
+</li></ol>
+</div>
+        
+        
+          <div class="comments mt-3">
+            <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+      this.page.url = '/projects/serghei-dmr/';
+      this.page.identifier = '/projects/serghei-dmr/';
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+          </div>
+        
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+  <div class="bottom">
+  <div class="container relative">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-auto">
+        
+          <div class="menu-bottom">
+  <ul>
+    
+      <li class="menu-item-Imprint">
+        <a href="/imprint/">Imprint</a>
+      </li>
+    
+      <li class="menu-item-Privacy">
+        <a href="https://help.github.com/articles/github-privacy-statement/">Privacy</a>
+      </li>
+    
+      <li class="menu-item-Sources">
+        <a href="https://github.com/JLESC/jlesc.github.io">Sources</a>
+      </li>
+    
+      <li class="menu-item-Found a Typo?">
+        <a href="https://github.com/JLESC/jlesc.github.io/issues">Found a Typo?</a>
+      </li>
+    
+  </ul>
+</div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<script type="text/javascript" src="/assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/assets/js/vendor/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/js/scripts.js"></script>
+
+
+  <script type="text/javascript" src="/assets/js/header.js"></script>
+
+<script type="text/javascript" src="/assets/js/hamburger.js"></script>
+<script type="text/javascript" src="/assets/js/darkModeSwitch.js"></script>
+
+
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', '');
+      </script>
+    
+  
+
+
+</body>
+</html>
